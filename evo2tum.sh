@@ -2,23 +2,24 @@
 
 VIRAL_RESULT_PATH="../Downloads/NTU_VIRAL"
 RESULT_WORKSPACE="My_WorkSpace/vs_code_ws"
-RESULT_NAME="GroundTruth"
+RESULT_NAME="RTLIO"
 
-MAIN_TOPIC="/leica/pose"
-SUB_TOPIC="relative"
+MAIN_TOPIC="/estimator"
+SUB_TOPIC="laser_odom"
 TOPIC=$MAIN_TOPIC"/"$SUB_TOPIC
-USE_GT=false
 
+
+USE_GT=false
 echo use ground truth "[y/n]"
 read GT
 if [[ $GT == y ]]; then
-	USE_GT=true
+	let USE_GT=true
 fi
 
 # eee dataset
 for ITER in {1..3}
 do
-	if [[ USE_GT ]]; then
+	if [[ $USE_GT ]]; then
 		echo use ground truth eee_$ITER "[y/n?]"
 		read VAR
 		if [[ $VAR == y ]]; then
@@ -38,7 +39,7 @@ done
 # nya dataset
 for ITER in {1..3}
 do
-	if [[ USE_GT ]]; then
+	if [[ $USE_GT ]]; then
 		echo use ground truth nya_$ITER "[y/n?]"
 		read VAR
 		if [[ $VAR == y ]]; then
@@ -58,7 +59,7 @@ done
 # sbs dataset
 for ITER in {1..3}
 do
-	if [[ USE_GT ]]; then
+	if [[ $USE_GT ]]; then
 		echo use ground truth sbs_$ITER "[y/n?]"
 		read VAR
 		if [[ $VAR == y ]]; then
