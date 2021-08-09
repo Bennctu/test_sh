@@ -6,10 +6,15 @@ export VIRAL_RESULT_PATH="../Downloads/NTU_VIRAL/"
 # export LAUNCH="mapping_ouster64"      # depth_map.launch
 # export TOPIC="/Odometry"                   # /depth_map/livins_odometry
 
-export RESULT_NAME="LIO_SAM"               # LiVINS
-export PACKAGE="lio_sam"                  # ncrl_livins
-export LAUNCH="run_ntuviral"      # depth_map
-export TOPIC="/lio_sam/mapping/odometry_incremental"                   # /depth_map/livins_odometry
+# export RESULT_NAME="LIO_SAM"               # LiVINS
+# export PACKAGE="lio_sam"                  # ncrl_livins
+# export LAUNCH="run_ntuviral"      # depth_map
+# export TOPIC="/lio_sam/mapping/odometry_incremental"                   # /depth_map/livins_odometry
+
+export RESULT_NAME="RTLIO"               # LiVINS
+export PACKAGE="ncrl_lio"                  # ncrl_livins
+export LAUNCH="run"      # depth_map
+export TOPIC="/estimator/laser_odom"                   # /depth_map/livins_odometry
 
 sh eee01.sh && 
 sh eee02.sh &&
