@@ -5,7 +5,7 @@ NAME_list=("LiVINS" "RTLIO" "LIO_SAM" "FastLIO" "ALOAM" "VINS")
 
 GROUND_TRUTH="GroundTruth"
 
-EVO_SETTING="--plot_relative_time --plot_mode=xy -p -a --t_max_diff 2.0" 
+EVO_SETTING="--plot_relative_time --plot_mode=xy -p -a --t_max_diff 2.0"
 
 VIR_EEE="true"
 VIR_NYA="false"
@@ -28,10 +28,10 @@ if [[ "$VIR_EEE" == "true" ]]; then
 	for i in {1..3}; do
 		echo ---------------------------$i-th----------------------------------
 		evo_traj tum ${EEE[$CHOICE,$i]} --ref=$RESULT_DIR/eee_0$i/$GROUND_TRUTH.tum $EVO_SETTING
+		if [[ "$SHOW_ALL" == "true" ]]; then
+			evo_traj tum ${EEE[0,$i]} ${EEE[1,$i]} ${EEE[2,$i]} ${EEE[3,$i]} ${EEE[4,$i]} ${EEE[5,$i]} --ref=$RESULT_DIR/eee_0$i/$GROUND_TRUTH.tum $EVO_SETTING
+		fi
 	done
-	if [[ "$SHOW_ALL" == "true" ]]; then
-		evo_traj tum ${EEE[0,$i]} ${EEE[1,$i]} ${EEE[2,$i]} ${EEE[3,$i]} ${EEE[4,$i]} ${EEE[5,$i]} --ref=$RESULT_DIR/eee_0$i/$GROUND_TRUTH.tum $EVO_SETTING
-	fi
 fi
 
 # Assign NYA name list
@@ -49,11 +49,10 @@ if [[ "$VIR_NYA" == "true" ]]; then
 	for i in {1..3}; do
 		echo ---------------------------$i-th----------------------------------
 		evo_traj tum ${NYA[$CHOICE,$i]} --ref=$RESULT_DIR/nya_0$i/$GROUND_TRUTH.tum $EVO_SETTING
+		if [[ "$SHOW_ALL" == "true" ]]; then
+			evo_traj tum ${NYA[0,$i]} ${NYA[1,$i]} ${NYA[2,$i]} ${NYA[3,$i]} ${NYA[4,$i]} ${NYA[5,$i]} --ref=$RESULT_DIR/nya_0$i/$GROUND_TRUTH.tum $EVO_SETTING
+		fi
 	done
-
-	if [[ "$SHOW_ALL" == "true" ]]; then
-		evo_traj tum ${NYA[0,$i]} ${NYA[1,$i]} ${NYA[2,$i]} ${NYA[3,$i]} ${NYA[4,$i]} ${NYA[5,$i]} --ref=$RESULT_DIR/nya_0$i/$GROUND_TRUTH.tum $EVO_SETTING
-	fi
 fi
 
 # Assign SBS name list
@@ -71,11 +70,10 @@ if [[ "$VIR_SBS" == "true" ]]; then
 	for i in {1..3}; do
 		echo ---------------------------$i-th----------------------------------
 		evo_traj tum ${SBS[$CHOICE,$i]} --ref=$RESULT_DIR/sbs_0$i/$GROUND_TRUTH.tum $EVO_SETTING
+		if [[ "$SHOW_ALL" == "true" ]]; then
+			evo_traj tum ${SBS[0,$i]} ${SBS[1,$i]} ${SBS[2,$i]} ${SBS[3,$i]} ${SBS[4,$i]} ${SBS[5,$i]} --ref=$RESULT_DIR/sbs_0$i/$GROUND_TRUTH.tum $EVO_SETTING
+		fi
 	done
-
-	if [[ "$SHOW_ALL" == "true" ]]; then
-		evo_traj tum ${SBS[0,$i]} ${SBS[1,$i]} ${SBS[2,$i]} ${SBS[3,$i]} ${SBS[4,$i]} ${SBS[5,$i]} --ref=$RESULT_DIR/sbs_0$i/$GROUND_TRUTH.tum $EVO_SETTING
-	fi
 fi
 
 
