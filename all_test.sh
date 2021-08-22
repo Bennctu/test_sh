@@ -1,5 +1,5 @@
 #! /bin/bash
-export VIRAL_RESULT_PATH="../Downloads/NTU_VIRAL/"
+export VIRAL_RESULT_PATH="../Downloads/ntu_viral_dataset/"
 
 export RESULT_NAME="LiVINS_2"
 export PACKAGE="ncrl_livins"

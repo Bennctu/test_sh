@@ -1,11 +1,11 @@
 #! /bin/bash
 
-VIRAL_RESULT_PATH="../Downloads/NTU_VIRAL"
-RESULT_WORKSPACE="My_WorkSpace/vs_code_ws"
-RESULT_NAME="RTLIO"
+VIRAL_RESULT_PATH="../Downloads/ntu_viral_dataset/"
+RESULT_WORKSPACE="Ben_ws/livins_ws"
+RESULT_NAME="LiVINS_2"
 
-MAIN_TOPIC="/estimator"
-SUB_TOPIC="laser_odom"
+MAIN_TOPIC="/depth_map"
+SUB_TOPIC="livins_odometry"
 TOPIC=$MAIN_TOPIC"/"$SUB_TOPIC
 
 
@@ -19,7 +19,7 @@ fi
 # eee dataset
 for ITER in {1..3}
 do
-	if [[ $USE_GT ]]; then
+	if [[ $USE_GT == true ]]; then
 		echo use ground truth eee_$ITER "[y/n?]"
 		read VAR
 		if [[ $VAR == y ]]; then
@@ -39,7 +39,7 @@ done
 # nya dataset
 for ITER in {1..3}
 do
-	if [[ $USE_GT ]]; then
+	if [[ $USE_GT == true ]]; then
 		echo use ground truth nya_$ITER "[y/n?]"
 		read VAR
 		if [[ $VAR == y ]]; then
@@ -59,7 +59,7 @@ done
 # sbs dataset
 for ITER in {1..3}
 do
-	if [[ $USE_GT ]]; then
+	if [[ $USE_GT == true ]]; then
 		echo use ground truth sbs_$ITER "[y/n?]"
 		read VAR
 		if [[ $VAR == y ]]; then
