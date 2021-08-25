@@ -1,7 +1,7 @@
 #! /bin/bash
 
 VIRAL_RESULT_PATH="../Downloads/ntu_viral_dataset/"
-RESULT_WORKSPACE="Ben_ws/livins_ws"
+TUM_PATH="../Ben_ws/livins_ws/src/lvio/ncrl_livins/demo/viral_results"
 RESULT_NAME="LiVINS_2"
 
 MAIN_TOPIC="/depth_map"
@@ -24,14 +24,14 @@ do
 		read VAR
 		if [[ $VAR == y ]]; then
 			evo_traj bag $VIRAL_RESULT_PATH/eee_0$ITER/eee_0$ITER.bag $TOPIC --save_as_tum &&
-			mv $SUB_TOPIC.tum ../$RESULT_WORKSPACE/src/lvio/ncrl_livins/demo/viral_results/eee_0$ITER/$RESULT_NAME.tum
+			mv $SUB_TOPIC.tum $TUM_PATH/eee_0$ITER/$RESULT_NAME.tum
 		fi
 	else
 		echo evaluate bag eee_$ITER "[y/n?]"
 		read VAR
 		if [[ $VAR == y ]]; then
 			evo_traj bag $VIRAL_RESULT_PATH/eee_0$ITER/eee_0$ITER"_"$RESULT_NAME.bag $TOPIC --save_as_tum &&
-			mv $SUB_TOPIC.tum ../$RESULT_WORKSPACE/src/lvio/ncrl_livins/demo/viral_results/eee_0$ITER/$RESULT_NAME.tum
+			mv $SUB_TOPIC.tum $TUM_PATH/eee_0$ITER/$RESULT_NAME.tum
 		fi
 	fi	
 done
@@ -44,14 +44,14 @@ do
 		read VAR
 		if [[ $VAR == y ]]; then
 			evo_traj bag $VIRAL_RESULT_PATH/nya_0$ITER/nya_0$ITER.bag $TOPIC --save_as_tum &&
-			mv $SUB_TOPIC.tum ../$RESULT_WORKSPACE/src/lvio/ncrl_livins/demo/viral_results/nya_0$ITER/$RESULT_NAME.tum
+			mv $SUB_TOPIC.tum $TUM_PATH/nya_0$ITER/$RESULT_NAME.tum
 		fi
 	else
 		echo evaluate bag nya_$ITER "[y/n?]"
 		read VAR
 		if [[ $VAR == y ]]; then
 			evo_traj bag $VIRAL_RESULT_PATH/nya_0$ITER/nya_0$ITER"_"$RESULT_NAME.bag $TOPIC --save_as_tum &&
-			mv $SUB_TOPIC.tum ../$RESULT_WORKSPACE/src/lvio/ncrl_livins/demo/viral_results/nya_0$ITER/$RESULT_NAME.tum
+			mv $SUB_TOPIC.tum $TUM_PATH/nya_0$ITER/$RESULT_NAME.tum
 		fi
 	fi
 done
@@ -64,14 +64,14 @@ do
 		read VAR
 		if [[ $VAR == y ]]; then
 			evo_traj bag $VIRAL_RESULT_PATH/sbs_0$ITER/sbs_0$ITER.bag $TOPIC --save_as_tum &&
-			mv $SUB_TOPIC.tum ../$RESULT_WORKSPACE/src/lvio/ncrl_livins/demo/viral_results/sbs_0$ITER/$RESULT_NAME.tum
+			mv $SUB_TOPIC.tum $TUM_PATH/sbs_0$ITER/$RESULT_NAME.tum
 		fi
 	else
 		echo evaluate bag sbs_$ITER "[y/n?]"
 		read VAR
 		if [[ $VAR == y ]]; then
 			evo_traj bag $VIRAL_RESULT_PATH/sbs_0$ITER/sbs_0$ITER"_"$RESULT_NAME.bag $TOPIC --save_as_tum &&
-			mv $SUB_TOPIC.tum ../$RESULT_WORKSPACE/src/lvio/ncrl_livins/demo/viral_results/sbs_0$ITER/$RESULT_NAME.tum
+			mv $SUB_TOPIC.tum $TUM_PATH/sbs_0$ITER/$RESULT_NAME.tum
 		fi
 	fi
 	

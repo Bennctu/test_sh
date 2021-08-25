@@ -8,25 +8,25 @@ export TOPIC="/depth_map/livins_odometry"
 export BAG_PARAM="--clock -r 0.3"
 
 
-# export RESULT_NAME="FastLIO"               # LiVINS
-# export PACKAGE="fast_lio"                  # ncrl_livins
-# export LAUNCH="mapping_ouster64"      # depth_map.launch
-# export TOPIC="/Odometry"                   # /depth_map/livins_odometry
+# export RESULT_NAME="FastLIO"
+# export PACKAGE="fast_lio"  
+# export LAUNCH="mapping_ouster64"
+# export TOPIC="/Odometry"
 
-# export RESULT_NAME="LIO_SAM"               # LiVINS
-# export PACKAGE="lio_sam"                  # ncrl_livins
-# export LAUNCH="run_ntuviral"      # depth_map
-# export TOPIC="/lio_sam/mapping/odometry_incremental"                   # /depth_map/livins_odometry
+# export RESULT_NAME="LIO_SAM"
+# export PACKAGE="lio_sam"
+# export LAUNCH="run_ntuviral"
+# export TOPIC="/lio_sam/mapping/odometry_incremental"
 
-# export RESULT_NAME="RTLIO"               # LiVINS
-# export PACKAGE="ncrl_lio"                  # ncrl_livins
-# export LAUNCH="run"      # depth_map
-# export TOPIC="/estimator/laser_odom"                   # /depth_map/livins_odometry
+# export RESULT_NAME="RTLIO"
+# export PACKAGE="ncrl_lio"
+# export LAUNCH="run"
+# export TOPIC="/estimator/laser_odom"
 
-# export RESULT_NAME="LOAM"               # LiVINS
-# export PACKAGE="loam_velodyne"                  # ncrl_livins
-# export LAUNCH="loam_velodyne"      # depth_map
-# export TOPIC="/integrated_to_init /aft_mapped_to_init"                   # /depth_map/livins_odometry
+# export RESULT_NAME="LOAM"
+# export PACKAGE="loam_velodyne"
+# export LAUNCH="loam_velodyne"
+# export TOPIC="/integrated_to_init /aft_mapped_to_init"
 
 sh eee01.sh && 
 sh eee02.sh &&

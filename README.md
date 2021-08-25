@@ -35,7 +35,8 @@ The ground truth topic is also assign  for ```MAIN_TOPIC``` and ```SUB_TOPIC```
 ```
 
 *Note*
-The directories of evaluation result need to be created. Ex: APE_results, RPE_results, APE_position_results, RPE_position_results ...
+    1. The directories of evaluation result need to be created. Ex: APE_results, RPE_results, APE_position_results, RPE_position_results ...
+    2. Need to choose the params ex: ```VIR_EEE```, ```VIR_NYA```, ```VIR_SBS```
 
 - 4. If you want to show the trajectory, please run ```evaluate_traj.sh```
 
